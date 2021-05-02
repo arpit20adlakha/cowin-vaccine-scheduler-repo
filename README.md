@@ -1,3 +1,4 @@
+![Sample_Output](https://user-images.githubusercontent.com/16517873/116822026-4bcd6f80-ab9a-11eb-81cf-5b83c6933341.jpg)
 # cowin-vaccine-scheduler-repo
 
 **Steps to setup twilio whatsapp sandbox**

@@ -15,6 +15,5 @@ function sendMessageWhole(msg, config) {
 
 
 module.exports = {
-    sendMessage : sendMessage,
     sendMessageWhole: sendMessageWhole
 }

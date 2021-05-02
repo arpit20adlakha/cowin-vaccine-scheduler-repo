@@ -8,7 +8,7 @@
 
 2. Enter the details in the config file located at the root of the repo after the sandbox setup.
 
-3. Refer to the image "How To Get Credentials.png" to add "accountSid", "authToken".
+3. Refer to the image "How to get twilio credentials.png" to add "accountSid", "authToken".
 
 4. Once the twilio setup is done, add the pin code and dates you want to get information for on different whatsapp numbers registered in the sandbox.
 

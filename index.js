@@ -51,7 +51,7 @@ async function callMain() {
     }
 }
 
-cron.schedule('*/1 * * * *', () => {
+cron.schedule('*/30 * * * *', () => {
     callMain().then(() => {
         console.log("Get Vaccinated !!!");
     });

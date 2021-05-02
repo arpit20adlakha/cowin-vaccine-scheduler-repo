@@ -1,4 +1,7 @@
 {
   "pincode": "143101",
-  "dates": ["03-05-2021","04-05-2021"]
+  "dates": ["03-05-2021","04-05-2021"],
+  "twilio_sandbox_number": "whatsapp:+14155238886",
+  "user_numbers": ["whatsapp:+919158043074", "whatsapp:+918295698984"]
+
 }

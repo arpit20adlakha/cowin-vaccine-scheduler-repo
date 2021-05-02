@@ -53,7 +53,7 @@ async function callMain() {
              let {center_id, lat, long, session_id, ...formattedMsg} = session;
 
              let answer = `For the date ${formattedMsg.date} the vaccine is available at Hospital ${formattedMsg.name} from ${formattedMsg.from} to ${formattedMsg.to}. Name of the vaccine available is ${formattedMsg.vaccine}. The capacity available is ${formattedMsg.available_capacity}. Fee charged for the vaccine is ${formattedMsg.fee}. And the ${str}`
-             message.sendMessageWhole(answer);
+             message.sendMessageWhole(answer, config);
         }
         console.log(obj.availability);
     }

@@ -25,15 +25,17 @@ function sendMessage(date, time, hospital) {
     }
 }
 
-function sendMessageWhole(answer) {
-    client.messages
-        .create({
-            body: `${answer}`,
-            from: 'whatsapp:+14155238886',
-            to: 'whatsapp:+919158043074'
-        })
-        .then(message => console.log(message.sid))
-        .done();
+function sendMessageWhole(msg, config) {
+    for(let user_number of config.user_numbers) {
+        client.messages
+            .create({
+                body: `${msg}`,
+                from: config.twilio_sandbox_number,
+                to: user_number
+            })
+            .then(message => console.log(message.sid))
+            .done();
+    }
 }
 
 

@@ -2,10 +2,10 @@ const axios = require('axios');
 const cron = require('node-cron');
 const message = require('./send-whatsapp');
 const fs = require('fs');
+let rawConfig = fs.readFileSync('./config.json');
+let config = JSON.parse(rawConfig);
 
 async function main() {
-    let rawConfig = fs.readFileSync('./config.json');
-    let config = JSON.parse(rawConfig);
     let url = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin";
     let pinCode = config.pincode;
     let dates = config.dates;
@@ -45,7 +45,7 @@ async function callMain() {
     }
 }
 
-cron.schedule('*/1 * * * *', () => {
+cron.schedule('*/30 * * * *', () => {
     callMain().then(() => {
         console.log("Get Vaccinated !!!");
     });

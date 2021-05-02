@@ -12,6 +12,8 @@
 
 5. Make sure you send the message to sandbox from the numbers you configure and add the sandbox number to your contacts.
 
+6. Dont add too many dates and numbers twilio will rate limit the requests otherwise.
+
 **Steps to Run the script**
 
 1. The dependencies for the script can be donwloaded using 

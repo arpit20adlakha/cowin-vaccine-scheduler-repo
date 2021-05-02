@@ -11,8 +11,8 @@ function sendMessageWhole(msg, config) {
             .then(message => console.log(message.sid))
             .done();
     }
-}
 
+}
 
 module.exports = {
     sendMessageWhole: sendMessageWhole

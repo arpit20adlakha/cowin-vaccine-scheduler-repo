@@ -2,8 +2,9 @@
   "pincode": "143101",
   "dates": ["03-05-2021","04-05-2021"],
   "twilio_sandbox_number": "whatsapp:+14155238886",
-  "user_numbers": ["whatsapp:+919158043074", "whatsapp:+918295698984"],
+  "user_numbers": ["whatsapp:+918295698984"],
   "accountSid": "ACca0fc81e7812240c2d1b09b53b911b59",
-  "authToken": "3d06e2f49b8132166c059284afdfe758"
+  "authToken": "149af590ffb49a09c675933eacfdd80a"
 
 }
+

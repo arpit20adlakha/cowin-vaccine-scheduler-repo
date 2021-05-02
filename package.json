@@ -13,6 +13,7 @@
     "install": "^0.13.0",
     "node-cron": "^3.0.0",
     "npm": "^7.11.2",
-    "prompt-sync": "^4.2.0"
+    "prompt-sync": "^4.2.0",
+    "twilio": "^3.61.0"
   }
 }

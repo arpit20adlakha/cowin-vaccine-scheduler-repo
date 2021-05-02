@@ -2,13 +2,14 @@
 
 const axios = require('axios');
 const prompt = require('prompt-sync')();
+// const cron = require(node-cron);
 
 async function main() {
     let url = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin";
     let pinCode;
     let dates = [];
-    pinCode = prompt("Enter your pin code");
-    let dateString = prompt("Enter the dates comma seperated in the String format DD-MM-YYYY" );
+    pinCode = prompt("Enter your pin code ");
+    let dateString = prompt("Enter the dates in a comma seperated format '03-04-2021,04-04-2021' where the data format is DD-MM-YYYY ");
     dates = dateString.split(',');
     let arrResponses = [];
 

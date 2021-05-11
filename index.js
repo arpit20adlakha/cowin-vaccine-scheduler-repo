@@ -15,7 +15,7 @@ async function main() {
 
     for(let date of dates) {
         let dateBasedUrl = addDate(url, date);
-        let response = await axios.get(dateBasedUrl);
+        let response = await axios.get(dateBasedUrl, { headers: { 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36' }  });
         arrResponses.push({"date": date, "availability": response.data});
     }
 
@@ -42,7 +42,7 @@ async function callMain() {
 
                 let {center_id, lat, long, session_id, ...formattedMsg} = session;
 
-                let answer = `For the date ${formattedMsg.date} the vaccine is available at Hospital ${formattedMsg.name} from ${formattedMsg.from} to ${formattedMsg.to}. Name of the vaccine available is ${formattedMsg.vaccine}. The capacity available is ${formattedMsg.available_capacity}. Fee charged for the vaccine is ${formattedMsg.fee}. And the ${str}`
+                let answer = `For the date ${formattedMsg.date} the vaccine is available at Hospital ${formattedMsg.name} from ${formattedMsg.from} to ${formattedMsg.to}. Name of the vaccine available is ${formattedMsg.vaccine}. Min age Limit is ${formattedMsg.min_age_limit}. The capacity available is ${formattedMsg.available_capacity}. Fee charged for the vaccine is ${formattedMsg.fee}. And the ${str}`
                 message.sendMessageWhole(answer, config);
             }
         }
@@ -51,11 +51,13 @@ async function callMain() {
     }
 }
 
-cron.schedule('*/30 * * * *', () => {
-    callMain().then(() => {
-        console.log("Get Vaccinated !!!");
-    });
+callMain().then(() => {
+    console.log("Get Vaccinated !!!");
 });
+
+// cron.schedule('*/1 * * * *', () => {
+//
+// });
 
 
 function addPinCode(url, pincode) {

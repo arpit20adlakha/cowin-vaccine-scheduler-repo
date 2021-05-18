@@ -51,13 +51,13 @@ async function callMain() {
     }
 }
 
-callMain().then(() => {
-    console.log("Get Vaccinated !!!");
-});
 
-// cron.schedule('*/1 * * * *', () => {
-//
-// });
+
+cron.schedule('*/1 * * * *', () => {
+    callMain().then(() => {
+        console.log("Get Vaccinated !!!");
+    });
+});
 
 
 function addPinCode(url, pincode) {
